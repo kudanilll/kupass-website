@@ -53,12 +53,14 @@ Configured via `next/font/local` in `common/font.ts` and exposed to Tailwind v4 
 
 ### Luminous Security Dome
 
-Built with two stacked radial gradients anchored below the fold (`108%` Y origin) so the glow rises naturally behind the 3D device without hard edges:
+Built with a full-bleed (`inset-0`) multi-stop eased radial gradient plus a soft-blurred deep core so there is zero seam, clipping boundary, or perceptual brightness ridge between `#004d25`, `#008c45`, `#afec2c`, and `#dffbc0`:
 
-1. **Outer Luminous Field** (`h-[60%] min-h-[340px]`):
-   `radial-gradient(125% 92% at 50% 108%, #006632 0%, #008c45 24%, #57c937 44%, #afec2c 60%, #dffbc0 76%, rgba(255,255,255,0) 90%)`
-2. **Deep Anchor Core** (`h-[44%] min-h-[240px] opacity-90`):
-   `radial-gradient(92% 70% at 50% 108%, #004d25 0%, #007036 28%, #008c45 55%, transparent 84%)`
+1. **Unified Multi-Stop Luminous Field** (`inset-0`):
+   `radial-gradient(125% 60% at 50% 106%, #004d25 0%, #006b34 11%, #008c45 23%, #26a73e 34%, #5dc736 44%, #8ce030 53%, #afec2c 61%, #cbf57a 70%, #dffbc0 79%, rgba(223, 251, 192, 0.45) 87%, rgba(255, 255, 255, 0) 96%)`
+2. **Soft-Blurred Anchor Glow** (`blur-3xl`, `-bottom-16`, `h-[38%] w-[115%]`):
+   `radial-gradient(closest-side, #004d25 0%, rgba(0, 140, 69, 0.72) 55%, rgba(0, 140, 69, 0) 100%)`
+3. **Tactile Film-Grain Noise Overlay** (`inset-0 z-[1] opacity-[0.30] mix-blend-soft-light`):
+   Tiled `160×160` inline SVG `feTurbulence` (`fractalNoise`, `baseFrequency=0.82`, `numOctaves=3`, `stitchTiles=stitch`) that eliminates radial gradient banding and adds organic matte texture over the dome with zero network or animation overhead.
 
 ### Elevation & Shadows
 

@@ -35,22 +35,30 @@ export function HeroSection() {
       {/* Bottom security-green & electric-lime luminous dome (#008c45 + #afec2c + #dffbc0) */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-x-0 bottom-0 h-[60%] min-h-[340px]"
+        className="pointer-events-none absolute inset-0"
         style={{
           background:
-            "radial-gradient(125% 92% at 50% 108%, #006632 0%, #008c45 24%, #57c937 44%, #afec2c 60%, #dffbc0 76%, rgba(255,255,255,0) 90%)",
+            "radial-gradient(125% 60% at 50% 106%, #004d25 0%, #006b34 11%, #008c45 23%, #26a73e 34%, #5dc736 44%, #8ce030 53%, #afec2c 61%, #cbf57a 70%, #dffbc0 79%, rgba(223, 251, 192, 0.45) 87%, rgba(255, 255, 255, 0) 96%)",
         }}
       />
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-x-0 bottom-0 h-[44%] min-h-[240px] opacity-90"
+        className="pointer-events-none absolute -bottom-16 left-1/2 h-[38%] w-[115%] -translate-x-1/2 rounded-[100%] opacity-80 blur-3xl"
         style={{
           background:
-            "radial-gradient(92% 70% at 50% 108%, #004d25 0%, #007036 28%, #008c45 55%, transparent 84%)",
+            "radial-gradient(closest-side, #004d25 0%, rgba(0, 140, 69, 0.72) 55%, rgba(0, 140, 69, 0) 100%)",
+        }}
+      />
+      {/* Subtle tactile film-grain noise texture (zero runtime cost, softens gradient banding) */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 z-[1] opacity-[0.30] mix-blend-soft-light"
+        style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E")`,
+          backgroundSize: "160px 160px",
         }}
       />
 
-      {/* Giant editorial headline behind the 3D Pixel 10 Pro */}
       <div className="relative z-10 flex w-full max-w-7xl flex-col items-center">
         <h1 className="w-full text-center font-bold tracking-[-0.045em] leading-[0.9] text-[#008c45] select-none whitespace-nowrap text-[clamp(3.35rem,15vw,12.5rem)]">
           Stay secure
