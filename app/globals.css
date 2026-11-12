@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-google-sans-flex), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-heming), ui-monospace, SFMono-Regular, monospace;
+
+  --color-kupass-primary: #008c45;
+  --color-kupass-deep: #004d25;
+  --color-kupass-mint: #dffbc0;
+  --color-kupass-lime: #afec2c;
+  --color-kupass-surface: #f7faee;
+}
+
+@layer base {
+  html {
+    background-color: #ffffff;
+    color: #004d25;
+  }
+
+  ::selection {
+    background-color: #dffbc0;
+    color: #004d25;
+  }
+}
